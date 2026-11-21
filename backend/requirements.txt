@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+python-multipart
+pandas
+scikit-learn
+joblib
+google-genai
+python-dotenv
+huggingface-hub

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="64" viewBox="0 0 420 64" role="img" aria-labelledby="signature-title signature-desc">
+  <title id="signature-title">README made with beautify-github-readme</title>
+  <desc id="signature-desc">Project badge indicating README designed with beautify-github-readme skill.</desc>
+
+  <defs>
+    <linearGradient id="sig-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1120"/>
+      <stop offset="100%" stop-color="#070A10"/>
+    </linearGradient>
+    <linearGradient id="sig-text" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="420" height="64" rx="12" fill="url(#sig-bg)" stroke="#1E293B" stroke-width="1"/>
+  
+  <!-- Dot Motif -->
+  <circle cx="28" cy="32" r="5" fill="#38BDF8"/>
+  <circle cx="28" cy="32" r="9" fill="none" stroke="#38BDF8" stroke-width="1" stroke-opacity="0.3"/>
+
+  <!-- Signature Text -->
+  <text x="50" y="27" font-family="'SFMono-Regular', Consolas, monospace" font-size="9.5" font-weight="700" fill="#64748B" letter-spacing="1">README DESIGNED WITH</text>
+  <text x="50" y="47" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="800" fill="url(#sig-text)">beautify-github-readme</text>
+
+  <!-- Arrow Indicator -->
+  <g transform="translate(376, 24)">
+    <rect width="24" height="24" rx="6" fill="#1E293B"/>
+    <path d="M 7 17 L 17 7 M 9 7 L 17 7 L 17 15" fill="none" stroke="#94A3B8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

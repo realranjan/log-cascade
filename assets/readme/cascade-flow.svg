@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="220" viewBox="0 0 1200 220" role="img" aria-labelledby="flow-title flow-desc">
+  <title id="flow-title">LogCascade Three-Tier Breakdown</title>
+  <desc id="flow-desc">Visual breakdown of latency, volume share, and cost efficiency across Tier 1 Regex, Tier 2 Embeddings, and Tier 3 LLM.</desc>
+
+  <defs>
+    <linearGradient id="flow-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090E1A"/>
+      <stop offset="100%" stop-color="#0E1626"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="220" rx="14" fill="url(#flow-bg)" stroke="#1E293B" stroke-width="1.2"/>
+
+  <!-- Card 1: Tier 1 Regex -->
+  <g transform="translate(36, 24)">
+    <rect width="350" height="172" rx="10" fill="#0B1220" stroke="#F59E0B" stroke-width="1"/>
+    <rect x="14" y="14" width="80" height="20" rx="4" fill="#78350F"/>
+    <text x="54" y="28" font-family="'SFMono-Regular', Consolas, monospace" font-size="10" font-weight="700" fill="#FBBF24" text-anchor="middle">TIER 1</text>
+    
+    <text x="104" y="29" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">Regex Fast-Path</text>
+    
+    <text x="14" y="56" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#94A3B8">Pre-filtered deterministic events</text>
+    
+    <line x1="14" y1="70" x2="336" y2="70" stroke="#1E293B" stroke-width="1"/>
+    
+    <text x="14" y="92" font-family="'SFMono-Regular', Consolas, monospace" font-size="11" fill="#64748B">LATENCY</text>
+    <text x="14" y="112" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800" fill="#F59E0B">&lt; 0.2 ms</text>
+
+    <text x="130" y="92" font-family="'SFMono-Regular', Consolas, monospace" font-size="11" fill="#64748B">TRAFFIC</text>
+    <text x="130" y="112" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800" fill="#F8FAFC">20.7%</text>
+
+    <text x="236" y="92" font-family="'SFMono-Regular', Consolas, monospace" font-size="11" fill="#64748B">UNIT COST</text>
+    <text x="236" y="112" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800" fill="#34D399">$0.000</text>
+    
+    <text x="14" y="146" font-family="'SFMono-Regular', Consolas, monospace" font-size="10.5" fill="#CBD5E1">• Backup, login, upload, reboot</text>
+  </g>
+
+  <!-- Card 2: Tier 2 Gemini Embeddings + LR -->
+  <g transform="translate(424, 24)">
+    <rect width="352" height="172" rx="10" fill="#0B1220" stroke="#10B981" stroke-width="1.2"/>
+    <rect x="14" y="14" width="80" height="20" rx="4" fill="#064E3B"/>
+    <text x="54" y="28" font-family="'SFMono-Regular', Consolas, monospace" font-size="10" font-weight="700" fill="#6EE7B7" text-anchor="middle">TIER 2</text>
+
+    <text x="104" y="29" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">Gemini Embed + LR</text>
+
+    <text x="14" y="56" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#94A3B8">gemini-embedding-001 (768-dim)</text>
+
+    <line x1="14" y1="70" x2="338" y2="70" stroke="#1E293B" stroke-width="1"/>
+
+    <text x="14" y="92" font-family="'SFMono-Regular', Consolas, monospace" font-size="11" fill="#64748B">LATENCY</text>
+    <text x="14" y="112" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800" fill="#34D399">~14 ms</text>
+
+    <text x="130" y="92" font-family="'SFMono-Regular', Consolas, monospace" font-size="11" fill="#64748B">TRAFFIC</text>
+    <text x="130" y="112" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800" fill="#F8FAFC">78.8%</text>
+
+    <text x="236" y="92" font-family="'SFMono-Regular', Consolas, monospace" font-size="11" fill="#64748B">ACCURACY</text>
+    <text x="236" y="112" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800" fill="#38BDF8">99.74%</text>
+
+    <text x="14" y="146" font-family="'SFMono-Regular', Consolas, monospace" font-size="10.5" fill="#CBD5E1">• High-volume statistical telemetry</text>
+  </g>
+
+  <!-- Card 3: Tier 3 Gemini LLM -->
+  <g transform="translate(814, 24)">
+    <rect width="350" height="172" rx="10" fill="#0B1220" stroke="#A855F7" stroke-width="1"/>
+    <rect x="14" y="14" width="80" height="20" rx="4" fill="#581C87"/>
+    <text x="54" y="28" font-family="'SFMono-Regular', Consolas, monospace" font-size="10" font-weight="700" fill="#E9D5FF" text-anchor="middle">TIER 3</text>
+
+    <text x="104" y="29" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#F8FAFC">Gemini LLM Reasoner</text>
+
+    <text x="14" y="56" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#94A3B8">Low-confidence semantic fallback</text>
+
+    <line x1="14" y1="70" x2="336" y2="70" stroke="#1E293B" stroke-width="1"/>
+
+    <text x="14" y="92" font-family="'SFMono-Regular', Consolas, monospace" font-size="11" fill="#64748B">LATENCY</text>
+    <text x="14" y="112" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800" fill="#C084FC">~380 ms</text>
+
+    <text x="130" y="92" font-family="'SFMono-Regular', Consolas, monospace" font-size="11" fill="#64748B">TRAFFIC</text>
+    <text x="130" y="112" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800" fill="#F8FAFC">&lt; 0.5%</text>
+
+    <text x="236" y="92" font-family="'SFMono-Regular', Consolas, monospace" font-size="11" fill="#64748B">COST SAVINGS</text>
+    <text x="236" y="112" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="800" fill="#34D399">&gt; 94%</text>
+
+    <text x="14" y="146" font-family="'SFMono-Regular', Consolas, monospace" font-size="10.5" fill="#CBD5E1">• Zero-shot edge &amp; workflow anomalies</text>
+  </g>
+</svg>
